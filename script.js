@@ -28,9 +28,7 @@ const inputvalue=document.querySelectorAll(".code")
        if(nextEle){
         nextEle.focus()
        }
-       else{
-              e.target.value="";
-       }
+              
     });
     });
 
