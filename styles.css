@@ -10,15 +10,15 @@ body{
 	align-items:center;
 	
 }
-
 input{
 	width:50px;
 	text-align:center;
 	justify-content: center;
 	height:60px;
-	padding-left: 15px;
+	padding-left: 8px;
 	align-items:center;
-	font-size:70px;
+	outline: none;
+	font-size:40px;
 	border:1px solid rgb(231, 231, 231);
 }
 p{
