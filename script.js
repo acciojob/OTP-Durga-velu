@@ -1,40 +1,36 @@
 //your JS code here. If required.
 
 
+
 const inputvalue=document.querySelectorAll(".code")
 
 
    
 
-    inputvalue.forEach((ele) => {
+    inputvalue.forEach((ele,index) => {
          
         ele.addEventListener(("keyup"),(e)=>{
 
-            let currentEle=e.target;
-            let inputField=e.key.charCodeAt(0)
-            console.log(e.key);
-            
+            let currentEle=e.target.value;
+           
+            if(currentEle.length==1 && index<inputvalue.length-1){
+               
+              inputvalue[index+1].focus();
 
-            if(e.key=="Backspace"){
-               let preElement=currentEle.previousElementSibling;
-               if(preElement){
-                preElement.focus()
-               } 
-               return;
             }
-   
+        });
 
-       let nextEle=currentEle.nextElementSibling;
-       if(nextEle){
-        nextEle.focus()
-       }
-              
+       ele.addEventListener(("keydown"),(e)=>{
+
+           if(e.key=="Backspace" && ele.value=="" && index>0){
+            inputvalue[index-1].focus()
+           }
+           else{
+            inputvalue.value=""
+           }
+
+       })
+  
     });
-    });
-
-
-
-
-
 
 
