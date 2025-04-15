@@ -3,7 +3,9 @@
 
 
 const inputvalue=document.querySelectorAll(".code")
-
+window.addEventListener("DOMContentLoaded", () => {
+  inputvalue[0].focus(); 
+});
 
        inputvalue.forEach((ele,index) => {   
         ele.addEventListener(("keyup"),(e)=>{
