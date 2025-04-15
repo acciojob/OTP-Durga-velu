@@ -1,7 +1,7 @@
 //your JS code here. If required.
 
 
-const inputvalue=document.getElementsByClassName("code")
+const inputvalue=document.querySelectorAll(".code")
 
 
    
